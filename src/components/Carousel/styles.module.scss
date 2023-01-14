@@ -1,0 +1,23 @@
+.carousel {
+    padding: 0 20px;
+}
+
+.title_wrapper {
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+    .title {
+        font-size: 24px;
+        font-weight: 500;
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px
+        }
+    }
+
+    a {
+        font-size: 22px;
+        color: #fff;
+        text-decoration: underline;
+    }
+}
