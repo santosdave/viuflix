@@ -1,0 +1,63 @@
+.navbar {
+    background-color: #000;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    padding: 15px;
+    z-index: 10;
+    animation: fade_left .5s ease-in-out;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        bottom: -1px;
+        width: 100%;
+        height: 60px;
+        animation: fade_bottom .5s ease;
+    }
+}
+
+.link {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 24px;
+    }
+
+    svg {
+        transition: all 0.3s ease;
+    }
+
+    &:hover svg {
+        color: #1976d2 !important;
+    }
+}
+
+@keyframes fade_left {
+    from {
+        transform: translateX(-90px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade_bottom {
+    from {
+        transform: translateY(60px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

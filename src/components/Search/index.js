@@ -1,8 +1,18 @@
 import React from 'react'
+import clsx from "clsx"
+
+import styles from "./styles.module.scss"
 
 function Search() {
   return (
-    <div>Search</div>
+    <div className={clsx(styles.search)}>
+      <form className={clsx(styles.form)}>
+          <input
+          type='text'
+          placeholder='Search'
+          />
+      </form>
+    </div>
   )
 }
 

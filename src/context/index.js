@@ -7,12 +7,12 @@ import React,{
 }
  from 'react'
 
- const AppContext = createContext(null);    
+const AppContext = createContext(null);    
 
 function AppContextProvider({children}) {
   return (
     <AppContext.Provider>
-
+      {children}
     </AppContext.Provider>
   )
 };
