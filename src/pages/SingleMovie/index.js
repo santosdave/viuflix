@@ -5,5 +5,4 @@ function SingleMovie() {
     <div>SingleMovie</div>
   )
 }
-
 export default SingleMovie

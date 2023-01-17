@@ -5,5 +5,4 @@ function TopRated() {
     <div>TopRated</div>
   )
 }
-
 export default TopRated

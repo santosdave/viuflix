@@ -6,7 +6,6 @@ import useFetch from "../../hooks/useFetch";
 import { API_KEY } from "../../utils/constants";
 import Carousel from '../../components/Carousel';
 
-
 function Popular() {
   const url = `movie/popular?api_key=${API_KEY}&language=en-US`;
   const { data, isLoading } = useFetch(url);
@@ -15,6 +14,7 @@ function Popular() {
     <Loading loading={isLoading}>
       <Carousel
         title="Popular Movies"
+        data={data?.results}
         style={{ marginTop: 40 }}
       />
     </Loading>
@@ -26,7 +26,7 @@ function Home() {
     <Layout title="Home">
       <NowPlaying />
       <Popular />
-      <div className="footer">Build on React • 2021</div>
+      <div className="footer">Rebuilt in React • 2022</div>
     </Layout>
   )
 }

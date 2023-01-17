@@ -5,5 +5,4 @@ function SingleGenre() {
     <div>SingleGenre</div>
   )
 }
-
 export default SingleGenre

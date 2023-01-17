@@ -52,6 +52,16 @@ function Carousel({ title, data, isCast, style }) {
             card;
           const path = isCast ? profile_path : poster_path;
           const link = isCast ? `/person/${id}` : `/movie/${id}`;
+          return (
+            <SwiperSlide key={id}>
+              
+              <div className={styles.carousel_card}>
+              <Link to={link}>
+                <Card path={path} alt={title}/>
+              </Link>
+              </div>
+            </SwiperSlide>
+          );
         })}
 
       </Swiper>
