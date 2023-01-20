@@ -46,7 +46,6 @@ function Carousel({ title, data, isCast, style }) {
         breakpoints={breakpoints}
         modules={[Navigation, FreeMode]}
       >
-
         {data?.map((card) => {
           const { id, title, poster_path, profile_path, name, character } =
             card;
@@ -54,7 +53,6 @@ function Carousel({ title, data, isCast, style }) {
           const link = isCast ? `/person/${id}` : `/movie/${id}`;
           return (
             <SwiperSlide key={id}>
-              
               <div className={styles.carousel_card}>
               <Link to={link}>
                 <Card path={path} alt={title}/>
@@ -63,7 +61,6 @@ function Carousel({ title, data, isCast, style }) {
             </SwiperSlide>
           );
         })}
-
       </Swiper>
     </div>
   )

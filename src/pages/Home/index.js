@@ -21,11 +21,40 @@ function Popular() {
   );
 }
 
+function TopRated() {
+  const url = `movie/top_rated?api_key=${API_KEY}&language=en-US`;
+  const { data, isLoading } = useFetch(url);
+  return (
+    <Loading loading={isLoading}>
+      <Carousel
+        title="Top Rated"
+        data={data?.results}
+        style={{ marginTop: 40 }}
+      />
+    </Loading>
+  );
+}
+function OnTheAir() {
+  const url = `trending/all/week?api_key=${API_KEY}&language=en-US`;
+  const { data, isLoading } = useFetch(url);
+  return (
+    <Loading loading={isLoading}>
+      <Carousel
+        title="Trending"
+        data={data?.results}
+        style={{ marginTop: 40 }}
+      />
+    </Loading>
+  );
+}
+
 function Home() {
   return (
     <Layout title="Home">
       <NowPlaying />
+      <OnTheAir/>
       <Popular />
+      <TopRated/>
       <div className="footer">Rebuilt in React • 2022</div>
     </Layout>
   )
