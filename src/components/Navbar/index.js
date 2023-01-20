@@ -33,7 +33,7 @@ function Navbar() {
       <button title='Search' className={styles.link}>
         <AiOutlineSearch color={activeLink("search")} />
       </button>
-      <Link title='Genres' className={styles.link} to={"/genre"}>
+      <Link title='Genres' className={styles.link} to={"/genres"}>
         <AiOutlineAppstore color={activeLink("genre")} />
       </Link>
       <Link title='Popular' className={styles.link} to={"/popular"}>
