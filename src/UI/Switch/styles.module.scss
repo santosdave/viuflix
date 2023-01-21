@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    width: 230px;
-    height: 45px;
+    width: 200px;
+    height: 34px;
     background: #fff;
     border-radius: 100px;
     position: relative;
@@ -19,25 +19,23 @@
 
 .switch_label .switch_button {
     content: '';
-    font-size: 32px;
-    font-weight: 500;
-    text-transform: capitalize;
-
-    @media screen and (max-width: 768px) {
-        font-size: 28px
-    }
-
     position: absolute;
-    align-content: center;
     left: 1px;
     width: 50%;
     border-radius: 45px;
     transition: 0.2s;
-    background: black;
+    background: #1976d2;
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 
-    .switch_text{
-       text-align: center;
+    .switch_text {
+       
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: black;
+        @media screen and (max-width: 768px) {
+            font-size: 28px
+        }
     }
 }
 
