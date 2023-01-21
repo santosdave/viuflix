@@ -8,7 +8,11 @@ import {
   AiOutlineHome,
   AiOutlineSearch,
   AiOutlineStar,
+  AiOutlineCalendar
 } from "react-icons/ai";
+
+
+import {BsGraphUp} from "react-icons/bs";
 
 function Navbar() {
 
@@ -34,7 +38,13 @@ function Navbar() {
         <AiOutlineSearch color={activeLink("search")} />
       </button>
       <Link title='Genres' className={styles.link} to={"/genres"}>
-        <AiOutlineAppstore color={activeLink("genre")} />
+        <AiOutlineAppstore color={activeLink("genres")} />
+      </Link>
+      <Link title='Upcoming' className={styles.link} to={"/upcoming"}>
+        <AiOutlineCalendar color={activeLink("upcoming")} />
+      </Link>
+      <Link title='Trending' className={styles.link} to={"/trending"}>
+        <BsGraphUp color={activeLink("trending")} />
       </Link>
       <Link title='Popular' className={styles.link} to={"/popular"}>
         <AiOutlineFire color={activeLink("popular")} />

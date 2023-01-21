@@ -8,6 +8,8 @@ import SingleGenre from "./pages/SingleGenre";
 import Person from "./pages/Person";
 import NotFound from "./pages/NotFound";
 import SearchResults from "./pages/SearchResults";
+import Upcoming from "./pages/Upcoming";
+import Trending from "./pages/Trending";
 
 
 const routeList = [
@@ -22,6 +24,14 @@ const routeList = [
     {
         path: '/genres',
         element :<Genres/>
+    },
+    {
+        path: '/upcoming',
+        element :<Upcoming/>
+    },
+    {
+        path: '/trending',
+        element :<Trending/>
     },
     {
         path: '/popular',
