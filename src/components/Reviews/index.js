@@ -1,9 +1,9 @@
 import React from 'react'
 
-function reviews() {
+function Reviews() {
   return (
     <div>reviews</div>
   )
 }
 
-export default reviews
+export default Reviews

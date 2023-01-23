@@ -1,9 +1,9 @@
 import React from 'react'
 
-function cast() {
+function Cast() {
   return (
     <div>cast</div>
   )
 }
 
-export default cast
+export default Cast

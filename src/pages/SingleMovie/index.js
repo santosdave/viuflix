@@ -9,6 +9,7 @@ import RenderIf from '../../utils/renderIf';
 import useFetch from '../../hooks/useFetch';
 import { useAppContext } from '../../context';
 import Details from '../../components/Details';
+import Tabs from '../../components/Tabs';
 function SingleMovie() {
   const { movieView } = useAppContext();
   const { id } = useParams();
@@ -26,6 +27,7 @@ function SingleMovie() {
   return (
     <Layout title={data?.title}>
       <Details details={data} loading={isLoading}/>
+      <Tabs id={id}/>
     </Layout>
   )
 }

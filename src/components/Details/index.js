@@ -93,20 +93,24 @@ function Details({ details, loading }) {
                 <p>{dateFormat(details?.first_air_date)}</p>
               </div>
               <div className={styles.info_item}>
-                <h4>Episode Runtime:</h4>
+                <h4>Ep. Runtime:</h4>
                 <p>{timeConverter(details?.episode_run_time)}</p>
               </div>
               <div className={styles.info_item}>
-                <h4>Number Of Seasons</h4>
+                <h4>No. Of Seasons</h4>
                 <p>{details?.number_of_seasons}</p>
               </div>
               <div className={styles.info_item}>
-                <h4>Number Of Episodes:</h4>
+                <h4>No. Of Episodes:</h4>
                 <p>{details?.number_of_episodes}</p>
               </div>
               <div className={styles.info_item}>
                 <h4>Production:</h4>
                 <p>{arrayToString(production_companies)}</p>
+              </div>
+              <div className={styles.info_item}>
+                <h4>Network:</h4>
+                <p>{arrayToString(details?.networks)}</p>
               </div>
             </div>
           </div>

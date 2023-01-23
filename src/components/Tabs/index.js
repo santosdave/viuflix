@@ -1,9 +1,60 @@
-import React from 'react'
+import React, { useEffect, memo,useState } from 'react'
+import clsx from "clsx";
+import styles from "./styles.module.scss";
+import Cast from '../Cast';
+import Videos from '../Videos';
+import Photos from '../Photos';
+import Reviews from '../Reviews';
 
-function tabs() {
+const title = ["Cast", "Videos", "Photos", "Reviews"];
+function TabNavItem({ title, tab, tabName, setTabName }) {
   return (
-    <div>tabs</div>
+    <button
+      className={clsx(styles.tab, { [styles.active]: tabName === tab })}
+      onClick={() => setTabName(tab)}
+    >
+      {title}
+    </button>
+  );
+}
+
+function TabContent({ tab, tabName, children }) {
+  return tabName === tab ? <>{children}</> : null;
+}
+
+function Tabs() {
+  const [tabName, setTabName] = useState('Cast')
+  return (
+    <>
+      <div className={styles.tab_nav}>
+        {title.map((item, i) => {
+          return (
+            <TabNavItem
+              key={i}
+              title={item}
+              tab={item}
+              tabName={tabName}
+              setTabName={setTabName}
+            />
+          );
+        })}
+      </div>
+      <div>
+        <TabContent tab='Cast' tabName={tabName}>
+          Cast
+        </TabContent>
+        <TabContent tab='Videos' tabName={tabName}>
+          Videos
+        </TabContent>
+        <TabContent tab='Photos' tabName={tabName}>
+          Photos
+        </TabContent>
+        <TabContent tab='Reviews' tabName={tabName}>
+          Reviews
+        </TabContent>
+      </div>
+    </>
   )
 }
 
-export default tabs
+export default memo(Tabs)

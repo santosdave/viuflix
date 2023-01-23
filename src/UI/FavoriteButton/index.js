@@ -4,16 +4,27 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useAppContext } from '../../context'
 
 function FavoriteButton({ movie }) {
-  const { favorites, handleToggleFavorite } = useAppContext();
+  const { favorites, handleToggleFavorite, tvFavorites, handleToggleTvFavorite, movieView } = useAppContext();
   return (
-    <span onClick={() => handleToggleFavorite(movie)} className={styles.icon}>
-      {favorites.find((favMovie) => favMovie.id === movie.id) ? (
-        <AiFillHeart />
+    <div>
+      {movieView ? (
+        <span onClick={() => handleToggleTvFavorite(movie)} className={styles.icon}>
+          {tvFavorites.find((favTv) => favTv.id === movie.id) ? (
+            <AiFillHeart />
+          ) : (
+            <AiOutlineHeart />
+          )}
+        </span>
       ) : (
-        <AiOutlineHeart />
+        <span onClick={() => handleToggleFavorite(movie)} className={styles.icon}>
+          {favorites.find((favMovie) => favMovie.id === movie.id) ? (
+            <AiFillHeart />
+          ) : (
+            <AiOutlineHeart />
+          )}
+        </span>
       )}
-    </span>
+    </div>
   )
 }
-
 export default FavoriteButton

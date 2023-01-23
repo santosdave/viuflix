@@ -10,9 +10,11 @@ import React, {
 const AppContext = createContext(null);
 
 const movieFromLocalStorage = JSON.parse(localStorage.getItem('movie') || '[]');
+const tvFromLocalStorage = JSON.parse(localStorage.getItem('tv') || '[]');
 
 function AppContextProvider({ children }) {
   const [favorites, setFavorites] = useState(movieFromLocalStorage);
+  const [tvFavorites, setTvFavorites] = useState(tvFromLocalStorage);
   const [search, setSearch] = useState(false);
   const [movieView, setMovieView] = useState(false);
 
@@ -32,22 +34,40 @@ function AppContextProvider({ children }) {
     [favorites]
   );
 
+  const handleToggleTvFavorite = useCallback(
+    (tv) => {
+      const exist = tvFavorites.find((favTv) => favTv.id === tv.id);
+      if (!exist) {
+        setTvFavorites([...tvFavorites, tv]);
+      } else {
+        const newItems = tvFavorites.filter(
+          (favTv) => favTv.id !== tv.id
+        );
+        setTvFavorites(newItems);
+      }
+    },
+    [tvFavorites]
+  );
 
-  const handleToggleSwitch = useCallback(()=>{
+
+  const handleToggleSwitch = useCallback(() => {
     setMovieView(!movieView);
   })
 
   useEffect(() => {
     localStorage.setItem("movie", JSON.stringify(favorites));
+    localStorage.setItem("tv", JSON.stringify(tvFavorites));
   }, [favorites]);
-  
+
   return (
     <AppContext.Provider
       value={{
         favorites,
+        tvFavorites,
         handleToggleFavorite,
         movieView,
         handleToggleSwitch,
+        handleToggleTvFavorite
       }}
     >
       {children}
