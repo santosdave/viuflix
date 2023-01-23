@@ -1,3 +1,6 @@
+.switch_container{
+    margin-bottom: 11px;
+}
 .switch_checkbox {
     height: 0;
     width: 0;
@@ -24,7 +27,8 @@
     width: 50%;
     border-radius: 45px;
     transition: 0.2s;
-    background: #1976d2;
+    // background: #1976d2;
+    background: black;
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 
     .switch_text {
@@ -32,7 +36,7 @@
         font-size: 30px;
         font-weight: 500;
         text-transform: capitalize;
-        color: black;
+       
         @media screen and (max-width: 768px) {
             font-size: 28px
         }
@@ -40,7 +44,7 @@
 }
 
 .switch_checkbox:checked+.switch_label .switch_button {
-    left: calc(100% - 2px);
+    left: calc(100%);
     transform: translateX(-100%);
 }
 

@@ -1,0 +1,16 @@
+.details_outer {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    z-index: 5;
+
+    @media screen and (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        height: auto;
+    }
+}
