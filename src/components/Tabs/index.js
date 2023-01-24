@@ -50,7 +50,7 @@ function Tabs({ id }) {
           <Photos id={id} />
         </TabContent>
         <TabContent tab='Reviews' tabName={tabName}>
-          Reviews
+          <Reviews id={id} />
         </TabContent>
       </div>
     </>
