@@ -30,7 +30,7 @@ function Trending() {
     const fetchData = () => {
         if (movieView) {
             instance()
-                .get(`tv/latest?api_key=${API_KEY}&language=en-US&page=${page}`)
+                .get(`tv/on_the_air?api_key=${API_KEY}&language=en-US&page=${page}`)
                 .then((res) => {
                     setTvData([...tvdata, ...res.data?.results]);
                     setPage(page + 1);
@@ -40,7 +40,7 @@ function Trending() {
                 });
         } else {
             instance()
-                .get(`tv/on_the_air?api_key=${API_KEY}&language=en-US&page=${page}`)
+                .get(`movie/latest?api_key=${API_KEY}&language=en-US&page=${page}`)
                 .then((res) => {
                     setMovieData([...moviedata, ...res.data?.results]);
                     setPage(page + 1);

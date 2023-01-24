@@ -28,6 +28,7 @@ function SingleMovie() {
     <Layout title={data?.title}>
       <Details details={data} loading={isLoading}/>
       <Tabs id={id}/>
+      
     </Layout>
   )
 }

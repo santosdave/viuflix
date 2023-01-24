@@ -97,7 +97,7 @@ function Details({ details, loading }) {
                 <p>{timeConverter(details?.episode_run_time)}</p>
               </div>
               <div className={styles.info_item}>
-                <h4>No. Of Seasons</h4>
+                <h4>No. Of Seasons:</h4>
                 <p>{details?.number_of_seasons}</p>
               </div>
               <div className={styles.info_item}>

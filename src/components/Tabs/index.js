@@ -1,4 +1,4 @@
-import React, { useEffect, memo,useState } from 'react'
+import React, { useEffect, memo, useState } from 'react'
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Cast from '../Cast';
@@ -22,7 +22,7 @@ function TabContent({ tab, tabName, children }) {
   return tabName === tab ? <>{children}</> : null;
 }
 
-function Tabs() {
+function Tabs({ id }) {
   const [tabName, setTabName] = useState('Cast')
   return (
     <>
@@ -41,13 +41,13 @@ function Tabs() {
       </div>
       <div>
         <TabContent tab='Cast' tabName={tabName}>
-          Cast
+          <Cast id={id} />
         </TabContent>
         <TabContent tab='Videos' tabName={tabName}>
-          Videos
+          <Videos id={id} />
         </TabContent>
         <TabContent tab='Photos' tabName={tabName}>
-          Photos
+          <Photos id={id} />
         </TabContent>
         <TabContent tab='Reviews' tabName={tabName}>
           Reviews
