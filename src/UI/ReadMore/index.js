@@ -14,7 +14,10 @@ function ReadMore({ text, limit }) {
             className={styles.button}
             onClick={() => setIsReadMore(!isReadMore)}
           >
+            <br/>
+            <span className={styles.read_span}>
             {isReadMore ? "Read Less" : "Read More"}
+            </span>
           </button>
         </>
       )}

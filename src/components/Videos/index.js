@@ -68,7 +68,6 @@ function Videos({ id }) {
               <iframe
                 title="frame"
                 src={`https://www.youtube.com/embed/${videoPath}?autoplay=1&mute=1`}
-                styleBorder="0"
                 allowFullScreen
               />
             </modal>
@@ -80,5 +79,4 @@ function Videos({ id }) {
     </Loading>
   )
 }
-
 export default Videos

@@ -1,9 +1,14 @@
 import React from 'react'
 
-function emptyMessage() {
+
+import styles from "./styles.module.scss";
+
+function EmptyMessage({msg, isHalf}) {
   return (
-    <div>emptyMessage</div>
+    <div className={`${styles.empty_message} ${isHalf ? styles.half_height : ''} fade_in`}>
+      {msg}
+    </div>
   )
 }
 
-export default emptyMessage
+export default EmptyMessage

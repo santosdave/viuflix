@@ -1,11 +1,16 @@
 .text {
     font-size: 14px;
     line-height: 20px;
-    background-color: #70757a;
+    background-color: #1b1d1f;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 .button {
     font-size: 14px;
     color: #1976d2;
-    margin-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    padding: 2px;
 }

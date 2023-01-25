@@ -49,6 +49,18 @@ function AppContextProvider({ children }) {
     [tvFavorites]
   );
 
+  const handleClearFavorites =  useCallback(() => {
+    localStorage.removeItem('movie');
+    setFavorites([]);
+    console.log('Clear favorites')
+  });
+
+  const handleClearTvFavorites =  useCallback(() => {
+    localStorage.removeItem('tv');
+    setTvFavorites([]);
+    console.log('Clear tv favorites')
+  });
+
 
   const handleToggleSwitch = useCallback(() => {
     setMovieView(!movieView);
@@ -67,7 +79,9 @@ function AppContextProvider({ children }) {
         handleToggleFavorite,
         movieView,
         handleToggleSwitch,
-        handleToggleTvFavorite
+        handleToggleTvFavorite,
+        handleClearFavorites,
+        handleClearTvFavorites
       }}
     >
       {children}
