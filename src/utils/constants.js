@@ -6,6 +6,7 @@ const API_KEY = process.env.REACT_APP_MOVIE_PUBLIC_API_KEY;
 const POSTER_URL = "https://image.tmdb.org/t/p/w780";
 const BACKDROP_URL = "https://image.tmdb.org/t/p/w1280";
 
+
 export {
   BASE_URL,
   API_KEY,

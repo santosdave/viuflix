@@ -22,11 +22,11 @@ function Navbar() {
 
   const activeLink = (link) => {
     switch (pathname) {
-      case link: {
-        return "#1976d2";
-      }
-      default:
-        return "#fff";
+        case link: {
+          return "#1976d2";
+        }
+        default:
+          return "#fff";
     }
   };
   return (
