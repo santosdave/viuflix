@@ -53,7 +53,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Viuflix Rebuild][product-screenshot]](https://example.com)
+ <img align="center" src="images/viuflix_screen_one.png" alt="Image" width="200" height="200">
+ <br/>
 Here is a movie libary project that utilizes a very broad and wide The Movie DB API to show available movies and tv series alongside a detailed description, cast and also related movies or shows.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -109,6 +110,8 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Here are the projects screenshots.
 
+
+ <img src="images/viuflix_screen_one.png" alt="Logo" width="80" height="80">
 [![Viuflix Rebuild][product-screenshot]](https://example.com)
 [![Viuflix Rebuild][product-screenshot-1]](https://example.com)
 [![Viuflix Rebuild][product-screenshot-2]](https://example.com)
