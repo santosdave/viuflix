@@ -55,7 +55,7 @@ function Home() {
       <OnTheAir/>
       <Popular />
       <TopRated/>
-      <div className="footer">Rebuilt in React • 2022</div>
+      <div className="footer">Rebuilt in React • 2022  • Powered by The Movie DB </div>
     </Layout>
   )
 }
