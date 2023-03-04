@@ -170,7 +170,7 @@ Project Link: https://github.com/santosdave
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images\viuflix_screen_one.png
+[product-screenshot]: images\screenshot.png
 [product-screenshot-1]: images\viuflix_screen_one.png
 [product-screenshot-2]: images\viuflix_screen_two.png
 [product-screenshot-3]: images\viuflix_screen_three.png
